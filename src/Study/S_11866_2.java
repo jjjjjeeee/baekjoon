@@ -23,8 +23,9 @@ public class S_11866_2 {
 		
 		for(int i=0; i<n-1; i++) {
 			for(int m=0; m<k-1; m++) {
-				q.offer(q.poll());
+				q.offer(q.poll()); 
 			}
+			System.out.println("ddd");
 			res.append(q.poll()+","); // res에 poll로 추출된 번호 추가
 		}
 		res.append(q.poll()+">");
