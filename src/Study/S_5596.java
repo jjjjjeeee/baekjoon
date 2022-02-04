@@ -7,26 +7,27 @@ public class S_5596 {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		
-		System.out.print("점수를 입력하세요.");
-		
-		int a = Integer.parseInt(s.nextLine());
-		int b = Integer.parseInt(s.nextLine());
-		
-		
-		int res1[] = new int[a];
-		int res2[] = new int[b];
-		 // 민국이 시험점수 담을 배열
-		 // 만세 시험점수 담을 배열
-		
-		int sum=0;
-		for(int i=0; i<res1.length ;i++) {
-			int S = s.nextInt();
-			sum += res1[i];
-			
-			
-		} System.out.printf("민국이 점수의 합은: %d",sum);
-		
-		
-	}
+		int S = 0; // 민국이 점수의 총합
+		int T = 0; // 만세 점수의 총합
+	
+		System.out.println("민국이 점수를 입력하세요.");
 
+		for(int i=0; i<4; i++) {
+			int score1 = s.nextInt();
+			S += score1;
+		}
+
+		System.out.println("만세 점수를 입력하세요.");
+		for(int i=0; i<4; i++) {
+			int score2 = s.nextInt();
+			T += score2;
+		}
+		if (S>=T) {
+			System.out.println(S);
+		} else {
+			System.out.println(T);
+		}
+		
+
+	}
 }
