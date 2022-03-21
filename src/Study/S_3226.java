@@ -12,8 +12,9 @@ public class S_3226 {
 		
 		
 		int callNum = Integer.parseInt(br.readLine());
+		
 		for(int i=0; i<callNum; i++) {
-			
+			System.out.println(i);
 			String call = br.readLine();
 			String a[] = call.split(" |:"); // 입력받은 전화정보를 배열 a에 공백으로 나눠서 담음
 
@@ -28,6 +29,7 @@ public class S_3226 {
 			if(HH>=23 && HH<7) {
 				price = MM*5;
 			}	
+			
 			System.out.println(price);			
 		}	
 	}
